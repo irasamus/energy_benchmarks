@@ -1,0 +1,3 @@
+LOG_START:1771346179132
+LOG_END:1771346179134
+[INFO] [02/17/2026 17:36:19.139] [main] [CoordinatedShutdown(akka://BaselineSystem)] Running CoordinatedShutdown with reason [ActorSystemTerminateReason]

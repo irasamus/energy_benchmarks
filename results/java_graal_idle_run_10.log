@@ -1,0 +1,3 @@
+LOG_START:1771430952654
+LOG_END:1771430982660
+[INFO] [02/18/2026 17:09:42.681] [main] [CoordinatedShutdown(akka://IdleSystem)] Running CoordinatedShutdown with reason [ActorSystemTerminateReason]

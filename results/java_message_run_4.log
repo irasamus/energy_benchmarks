@@ -1,0 +1,4 @@
+--- STARTING MESSAGE PASSING ---
+--- FINISHED ---
+Time taken: 1648 ms
+[INFO] [02/17/2026 17:39:12.159] [MessageSystem-akka.actor.default-dispatcher-9] [CoordinatedShutdown(akka://MessageSystem)] Running CoordinatedShutdown with reason [ActorSystemTerminateReason]
