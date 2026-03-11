@@ -1,0 +1,5 @@
+lib/
+results2/
+*.csv
+*.log
+.DS_Store
