@@ -33,7 +33,10 @@ public class Message { // Class name matches file name "Message.java"
         public Receive createReceive() {
             return receiveBuilder()
                 // Start the process
-                .matchEquals("start", s -> target.tell("ping", getSelf()))
+                .matchEquals("start", s -> {
+                System.out.println("LOG_START:" + System.currentTimeMillis());
+                target.tell("ping", getSelf());
+                })
                 
                 // Handle the reply
                 .matchEquals("pong", s -> {
@@ -44,6 +47,7 @@ public class Message { // Class name matches file name "Message.java"
                     } else {
                         // Finished
                         long end = System.currentTimeMillis();
+                        System.out.println("LOG_END:" + end);
                         System.out.println("--- FINISHED ---");
                         System.out.println("Time taken: " + (end - startTime) + " ms");
                         getContext().getSystem().terminate();
