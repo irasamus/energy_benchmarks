@@ -10,8 +10,8 @@ public class Trapezoid {
     // --- Messages ---
     static class WorkMessage {
         public final double left, right, step;
-        public final int intervals;
-        public WorkMessage(double left, double right, double step, int intervals) {
+        public final long intervals;
+        public WorkMessage(double left, double right, double step, long intervals) {
             this.left = left; this.right = right; this.step = step; this.intervals = intervals;
         }
     }
@@ -29,7 +29,7 @@ public class Trapezoid {
                 .match(WorkMessage.class, msg -> {
                     double area = 0.0;
                     double x = msg.left;
-                    for (int i = 0; i < msg.intervals; i++) {
+                    for (long i = 0; i < msg.intervals; i++) {
                         // Trapezoidal rule math
                         area += (fx(x) + fx(x + msg.step)) / 2.0 * msg.step;
                         x += msg.step;
@@ -72,9 +72,9 @@ public class Trapezoid {
     // --- Main ---
     public static void main(String[] args) {
         // Total intervals to calculate (100 Million for heavy CPU load)
-        int totalIntervals = 100_000_000;
+        long totalIntervals = 2000000000L;
         int numWorkers = 100;
-        int intervalsPerWorker = totalIntervals / numWorkers;
+        long intervalsPerWorker = totalIntervals / numWorkers;
         
         double leftBoundary = 1.0;
         double rightBoundary = 100.0;

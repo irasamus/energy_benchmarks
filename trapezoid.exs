@@ -39,7 +39,7 @@ defmodule Trapezoid do
   # --- Main ---
   def run do
     # 100 Million intervals for heavy CPU load
-    total_intervals = 100_000_000
+    total_intervals = 2_000_000_000
     num_workers = 100
     intervals_per_worker = div(total_intervals, num_workers)
 

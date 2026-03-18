@@ -15,9 +15,9 @@ public class ThreadRing {
                 .match(ActorRef.class, actorRef -> {
                     this.next = actorRef;
                 })
-                .match(Integer.class, n -> {
+                .match(Long.class, n -> {
                     if (n > 0) {
-                        next.tell(n - 1, getSelf());
+                        next.tell(n - 1L, getSelf());
                     } else {
                         // Added LOG_END before terminating
                         System.out.println("LOG_END:" + System.currentTimeMillis());
@@ -30,8 +30,8 @@ public class ThreadRing {
     }
 
     public static void main(String[] args) {
-        int nActors = 1_000; 
-        int nPasses = 50_000_000; 
+        int nActors = 5_000; 
+        Long nPasses = 100_000_000L; 
 
         ActorSystem system = ActorSystem.create("ThreadRingSystem");
         
