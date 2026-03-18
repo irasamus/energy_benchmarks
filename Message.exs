@@ -69,7 +69,7 @@ end
 
 defmodule PingPong do
   def run do
-    n_messages = 1_000_000
+    n_messages = 5_000_000
 
     # Start both servers
     {:ok, _ponger} = Ponger.start_link([])

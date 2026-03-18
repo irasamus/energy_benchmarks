@@ -32,7 +32,7 @@ public class Spawner {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        int totalActors = 1_000_000;
+        int totalActors = 2_000_000;
         int batchSize = 5_000;
         int numBatches = totalActors / batchSize;
 

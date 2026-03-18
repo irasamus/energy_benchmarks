@@ -1,7 +1,7 @@
 defmodule Spawner do
   def run do
     # Total actors to spawn
-    total_actors = 1_000_000
+    total_actors = 2_000_000
     # Process in small batches to keep memory flat/stable
     batch_size = 5_000
     num_batches = div(total_actors, batch_size)

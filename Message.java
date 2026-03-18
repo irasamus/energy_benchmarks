@@ -60,7 +60,7 @@ public class Message { // Class name matches file name "Message.java"
     // 3. Main Setup
     public static void main(String[] args) {
         ActorSystem system = ActorSystem.create("MessageSystem");
-        int limit = 1_000_000; // 1 Million messages
+        int limit = 5_000_000; // 1 Million messages
 
         System.out.println("--- STARTING MESSAGE PASSING ---");
         
