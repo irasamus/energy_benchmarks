@@ -14,8 +14,8 @@ defmodule ThreadRing do
   end
 
   def run do
-    n_actors = 5_000
-    token_value = 100_000_000
+    n_actors = 1_000
+    token_value = 50_000_000
 
     IO.puts("--- STARTING THREAD RING (Elixir) ---")
     IO.puts("LOG_START:#{System.system_time(:millisecond)}")
