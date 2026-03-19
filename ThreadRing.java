@@ -30,8 +30,8 @@ public class ThreadRing {
     }
 
     public static void main(String[] args) {
-        int nActors = 5_000; 
-        Long nPasses = 100_000_000L; 
+        int nActors = 1_000; 
+        Long nPasses = 50_000_000L; 
 
         ActorSystem system = ActorSystem.create("ThreadRingSystem");
         
